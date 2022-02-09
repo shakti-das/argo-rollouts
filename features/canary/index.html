@@ -8,11 +8,10 @@
       
       
       
-      
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/features/canary/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -20,14 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d6be258b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#009485">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -37,14 +32,15 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font-family:"Work Sans";--md-code-font-family:""}</style>
+        <style>:root{--md-text-font:"Work Sans";--md-code-font:""}</style>
       
     
     
+      <link rel="stylesheet" href="../../assets/versions.css">
     
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -53,13 +49,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,7 +75,10 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Argo Rollouts - Kubernetes Progressive Delivery Controller" class="md-header__button md-logo" aria-label="Argo Rollouts - Kubernetes Progressive Delivery Controller" data-md-component="logo">
       
@@ -103,13 +105,34 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -141,8 +164,7 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -154,11 +176,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -183,8 +208,7 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -270,10 +294,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
-      <label class="md-nav__link" for="__nav_5">
-        Getting Started
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
@@ -282,6 +310,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -292,8 +321,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -304,8 +335,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -316,8 +349,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -328,8 +363,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -340,8 +377,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -352,6 +391,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -389,10 +429,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
-      <label class="md-nav__link" for="__nav_7">
-        Rollout
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Rollout
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Rollout" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
@@ -401,6 +445,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
     
@@ -412,10 +457,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" checked>
       
-      <label class="md-nav__link" for="__nav_7_1">
-        Deployment Strategies
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Deployment Strategies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Deployment Strategies" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_1">
           <span class="md-nav__icon md-icon"></span>
@@ -424,6 +473,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -434,8 +484,10 @@
     </li>
   
 
+            
           
             
+              
   
   
     
@@ -459,6 +511,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -494,8 +547,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controlling-canary-scale" class="md-nav__link">
-    Controlling Canary Scale
+  <a href="#dynamic-canary-scale-with-traffic-routing" class="md-nav__link">
+    Dynamic Canary Scale (with Traffic Routing)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-stable-scale-with-traffic-routing" class="md-nav__link">
+    Dynamic Stable Scale (with Traffic Routing)
   </a>
   
 </li>
@@ -576,14 +636,17 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -594,8 +657,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -606,8 +671,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -618,8 +685,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -630,8 +699,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scaledown-aborted-rs/" class="md-nav__link">
+        Scaledown Aborted Rollouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -642,8 +727,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -654,8 +741,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -666,8 +755,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -678,6 +769,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -698,10 +790,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
       
-      <label class="md-nav__link" for="__nav_8">
-        Traffic Management
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Traffic Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Traffic Management" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
@@ -710,6 +806,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -720,8 +817,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -732,8 +831,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -744,8 +845,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -756,8 +859,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -768,8 +873,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -780,6 +887,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -800,10 +908,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
-      <label class="md-nav__link" for="__nav_9">
-        Analysis
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Analysis" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
@@ -812,6 +924,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -822,8 +935,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -834,8 +949,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -846,8 +963,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -858,8 +977,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -870,8 +991,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -882,8 +1005,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -894,8 +1019,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -906,6 +1033,21 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../analysis/cloudwatch/" class="md-nav__link">
+        CloudWatch
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
@@ -941,10 +1083,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
-      <label class="md-nav__link" for="__nav_11">
-        Notifications
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Notifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Notifications" data-md-level="1">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
@@ -953,6 +1099,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -963,8 +1110,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -974,10 +1123,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
       
-      <label class="md-nav__link" for="__nav_11_2">
-        Services
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          Services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Services" data-md-level="2">
         <label class="md-nav__title" for="__nav_11_2">
           <span class="md-nav__icon md-icon"></span>
@@ -986,6 +1139,21 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/notification-services/alertmanager/" class="md-nav__link">
+        Alertmanager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -996,8 +1164,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1008,8 +1178,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/notification-services/googlechat/" class="md-nav__link">
+        Google Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1020,8 +1206,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1032,8 +1220,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1044,8 +1234,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1056,8 +1248,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/notification-services/pushover/" class="md-nav__link">
+        Pushover
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1068,8 +1276,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1080,8 +1290,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1092,8 +1304,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1104,8 +1318,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1116,12 +1332,14 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1142,10 +1360,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_12">
-        Kubectl Plugin
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Kubectl Plugin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Kubectl Plugin" data-md-level="1">
         <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
@@ -1154,6 +1376,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1164,8 +1387,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1175,10 +1400,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_2" type="checkbox" id="__nav_12_2" >
       
-      <label class="md-nav__link" for="__nav_12_2">
-        Commands
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_2">
+          Commands
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Commands" data-md-level="2">
         <label class="md-nav__title" for="__nav_12_2">
           <span class="md-nav__icon md-icon"></span>
@@ -1187,6 +1416,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1197,8 +1427,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1209,8 +1441,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../generated/kubectl-argo-rollouts/kubectl-argo-rollouts_completion/" class="md-nav__link">
+        Rollouts Completion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1221,8 +1469,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1233,8 +1483,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1245,8 +1497,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1257,8 +1511,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1269,8 +1525,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1281,8 +1539,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1293,8 +1553,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1305,8 +1567,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1317,8 +1581,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1329,8 +1595,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1341,8 +1609,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1353,8 +1623,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1365,8 +1637,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1377,8 +1651,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1389,8 +1665,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1401,8 +1679,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1413,8 +1693,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1425,8 +1707,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1437,8 +1721,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1449,8 +1735,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1461,8 +1749,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1473,8 +1763,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1485,8 +1777,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1497,8 +1791,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1509,8 +1805,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1521,8 +1819,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1533,8 +1833,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1545,8 +1847,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1557,8 +1861,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1569,8 +1875,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1581,12 +1889,14 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1682,10 +1992,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
       
-      <label class="md-nav__link" for="__nav_18">
-        Contributing
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_18">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
         <label class="md-nav__title" for="__nav_18">
           <span class="md-nav__icon md-icon"></span>
@@ -1694,6 +2008,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1704,8 +2019,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1716,8 +2033,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1728,6 +2047,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1792,6 +2112,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1827,8 +2148,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#controlling-canary-scale" class="md-nav__link">
-    Controlling Canary Scale
+  <a href="#dynamic-canary-scale-with-traffic-routing" class="md-nav__link">
+    Dynamic Canary Scale (with Traffic Routing)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-stable-scale-with-traffic-routing" class="md-nav__link">
+    Dynamic Stable Scale (with Traffic Routing)
   </a>
   
 </li>
@@ -1914,12 +2242,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/features/canary.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="canary-deployment-strategy">Canary Deployment Strategy<a class="headerlink" href="#canary-deployment-strategy" title="Permanent link">&para;</a></h1>
+<a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/features/canary.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="canary-deployment-strategy">Canary Deployment Strategy<a class="headerlink" href="#canary-deployment-strategy" title="Permanent link">&para;</a></h1>
 <p>A canary rollout is a deployment strategy where the operator releases a new version of their application to a small percentage of the production traffic. </p>
 <h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>Since there is no agreed upon standard for a canary deployment, the rollouts controller allows users to outline how they want to run their canary deployment. Users can define a list of steps the controller uses to manipulate the ReplicaSets when there is a change to the <code>.spec.template</code>. Each step will be evaluated before the new ReplicaSet is promoted to the stable version, and the old version is completely scaled down.</p>
@@ -1929,55 +2257,55 @@
 <p>If the canary Rollout does not use <a href="../traffic-management/">traffic management</a>, the Rollout makes a best effort attempt to achieve the percentage listed in the last <code>setWeight</code> step between the new and old version. For example, if a Rollout has 10 Replicas and 10% for the first <code>setWeight</code> step, the controller will scale the new desired ReplicaSet to 1 replicas and the old stable ReplicaSet to 9. In the case where the setWeight is 15%, the Rollout attempts to get there by rounding up the calculation (i.e. the new ReplicaSet has 2 pods since 15% of 10, rounds up to 2 and the old ReplicaSet has 9 pods since 85% of 10, rounds up to 9). If a user wants to have more fine-grained control of the percentages without a large number of Replicas, that user should use the  <a href="#trafficrouting">traffic management</a> functionality.</p>
 </div>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">example-rollout</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">matchLabels</span><span class="p">:</span>
-      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
-  <span class="nt">template</span><span class="p">:</span>
-    <span class="nt">metadata</span><span class="p">:</span>
-      <span class="nt">labels</span><span class="p">:</span>
-        <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
-    <span class="nt">spec</span><span class="p">:</span>
-      <span class="nt">containers</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx</span>
-        <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">nginx:1.15.4</span>
-        <span class="nt">ports</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">containerPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-  <span class="nt">minReadySeconds</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">30</span>
-  <span class="nt">revisionHistoryLimit</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span> <span class="c1">#Indicates that the rollout should use the Canary strategy</span>
-      <span class="nt">maxSurge</span><span class="p">:</span> <span class="s">&quot;25%&quot;</span>
-      <span class="nt">maxUnavailable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-      <span class="nt">steps</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setWeight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10</span>
-      <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span>
-          <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1h</span> <span class="c1"># 1 hour</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setWeight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">20</span>
-      <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{}</span> <span class="c1"># pause indefinitely</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rollout</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-rollout</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">labels</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span><span class="w"></span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.15.4</span><span class="w"></span>
+<span class="w">        </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">  </span><span class="nt">minReadySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span><span class="w"></span>
+<span class="w">  </span><span class="nt">revisionHistoryLimit</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"> </span><span class="c1">#Indicates that the rollout should use the Canary strategy</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;25%&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maxUnavailable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1h</span><span class="w"> </span><span class="c1"># 1 hour</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">20</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"> </span><span class="c1"># pause indefinitely</span><span class="w"></span>
 </code></pre></div>
 <h2 id="pause-duration">Pause Duration<a class="headerlink" href="#pause-duration" title="Permanent link">&para;</a></h2>
 <p>Pause duration can be specified with an optional time unit suffix. Valid time units are "s", "m", "h". Defaults to "s" if not specified.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="nt">steps</span><span class="p">:</span>
-        <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span> <span class="nv">10</span> <span class="p p-Indicator">}</span>  <span class="c1"># 10 seconds</span>
-        <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span> <span class="nv">10s</span> <span class="p p-Indicator">}</span> <span class="c1"># 10 seconds</span>
-        <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span> <span class="nv">10m</span> <span class="p p-Indicator">}</span> <span class="c1"># 10 minutes</span>
-        <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span> <span class="nv">10h</span> <span class="p p-Indicator">}</span> <span class="c1"># 10 hours</span>
-        <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span> <span class="p p-Indicator">{}</span>                <span class="c1"># pause indefinitely</span>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span><span class="w"> </span><span class="nv">10</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w">  </span><span class="c1"># 10 seconds</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span><span class="w"> </span><span class="nv">10s</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="c1"># 10 seconds</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span><span class="w"> </span><span class="nv">10m</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="c1"># 10 minutes</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> duration</span><span class="p">:</span><span class="w"> </span><span class="nv">10h</span><span class="w"> </span><span class="p p-Indicator">}</span><span class="w"> </span><span class="c1"># 10 hours</span><span class="w"></span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w">                </span><span class="c1"># pause indefinitely</span><span class="w"></span>
 </code></pre></div>
 <p>If no <code>duration</code> is specified for a pause step, the rollout will be paused indefinitely. To unpause, use the <a href="../kubectl-plugin/">argo kubectl plugin</a> <code>promote</code> command. </p>
 <div class="highlight"><pre><span></span><code><span class="c1"># promote to the next step</span>
 kubectl argo rollouts promote &lt;rollout&gt;
 </code></pre></div>
-<h2 id="controlling-canary-scale">Controlling Canary Scale<a class="headerlink" href="#controlling-canary-scale" title="Permanent link">&para;</a></h2>
+<h2 id="dynamic-canary-scale-with-traffic-routing">Dynamic Canary Scale (with Traffic Routing)<a class="headerlink" href="#dynamic-canary-scale-with-traffic-routing" title="Permanent link">&para;</a></h2>
 <p>By default, the rollout controller will scale the canary to match the current trafficWeight of the
 current step. For example, if the current weight is 25%, and there are four replicas, then the
 canary will be scaled to 1, to match the traffic weight.</p>
@@ -1995,45 +2323,88 @@ match the traffic weight. Some use cases for this:</p>
 </div>
 <p>Setting canary scale is only available when using the canary strategy with a traffic router, since
   the basic canary needs to control canary scale in order to approximate canary weight.</p>
-<p>To control canary weights during steps, use the <code>setCanaryScale</code> step and indicate which scale the
+<p>To control canary scales and weights during steps, use the <code>setCanaryScale</code> step and indicate which scale the
 the canary should use:</p>
 <ul>
-<li>explicit replica count</li>
-<li>explicit weight percentage of total spec.replicas</li>
-<li>to match current canary setWeight</li>
+<li>explicit replica count without changing traffic weight (<code>replicas</code>)</li>
+<li>explicit weight percentage of total spec.replicas without changing traffic weight(<code>weight</code>)</li>
+<li>to or not to match current canary's <code>setWeight</code> step (<code>matchTrafficWeight: true or false</code>)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="nt">steps</span><span class="p">:</span>
-      <span class="c1"># explicit count</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setCanaryScale</span><span class="p">:</span>
-          <span class="nt">replicas</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">3</span>
-      <span class="c1"># a percentage of spec.replicas</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setCanaryScale</span><span class="p">:</span>
-          <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">25</span>
-      <span class="c1"># matchTrafficWeight returns to the default behavior of matching the canary traffic weight</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setCanaryScale</span><span class="p">:</span>
-          <span class="nt">matchTrafficWeight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># explicit count</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># a percentage of spec.replicas</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">25</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># matchTrafficWeight returns to the default behavior of matching the canary traffic weight</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">matchTrafficWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
-<p>If no <code>duration</code> is specified for a pause step, the rollout will be paused indefinitely. To unpause, use the <a href="../kubectl-plugin/">argo kubectl plugin</a> <code>promote</code> command. </p>
-<div class="highlight"><pre><span></span><code><span class="c1"># promote to the next step</span>
-kubectl argo rollouts promote &lt;rollout&gt;
+<p>When using <code>setCanaryScale</code> with explicit values for either replicas or weight, one must be careful
+if used in conjunction with the <code>setWeight</code> step. If done incorrectly, an imbalanced amount of traffic
+may be directed to the canary (in proportion to the Rollout's scale). For example, the following set
+of steps would cause 90% of traffic to only be served by 10% of pods:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># 1 canary pod (10% of spec.replicas)</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setCanaryScale</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># 90% of traffic to the 1 canary pod</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span><span class="w"></span>
+</code></pre></div>
+<p>The above situation is caused by the changed behvaior of <code>setWeight</code> after <code>setCanaryScale</code>. To reset, set <code>matchTrafficWeight: true</code> and the <code>setWeight</code> behavior will be restored, i.e., subsequent <code>setWeight</code> will create canary replicas matching the traffic weight.</p>
+<h2 id="dynamic-stable-scale-with-traffic-routing">Dynamic Stable Scale (with Traffic Routing)<a class="headerlink" href="#dynamic-stable-scale-with-traffic-routing" title="Permanent link">&para;</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Available since v1.1</p>
+</div>
+<p>When using traffic routing, by default the stable ReplicaSet is left scaled to 100% during the update.
+This has the advantage that if an abort occurs, traffic can be immediately shifted back to the
+stable ReplicaSet without delay. However, it has the disadvantage that during the update, there will
+eventually exist double the number of replica pods running (similar to in a blue-green deployment),
+since the stable ReplicaSet is left scaled up for the full duration of the update.</p>
+<p>It is possible to dynamically reduce the scale of the stable ReplicaSet during an update such that
+it scales down as the traffic weight increases to canary. This would be desirable in scenarios where
+the Rollout has a high replica count and resource cost is a concern, or in bare-metal situations
+where it is not possible to create additional node capacity to accommodate double the replicas.</p>
+<p>The ability to dynamically scale the stable ReplicaSet can be enabled by setting the
+<code>canary.dynamicStableScale</code> flag to true:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dynamicStableScale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+</code></pre></div>
+<p>NOTE: that if <code>dynamicStableScale</code> is set, and the rollout is aborted, the canary ReplicaSet will
+dynamically scale down as traffic shifts back to stable. If you wish to leave the canary ReplicaSet
+scaled up while aborting, an explicit value for <code>abortScaleDownDelaySeconds</code> can be set:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">dynamicStableScale</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
+<span class="w">      </span><span class="nt">abortScaleDownDelaySeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">600</span><span class="w"></span>
 </code></pre></div>
 <h2 id="mimicking-rolling-update">Mimicking Rolling Update<a class="headerlink" href="#mimicking-rolling-update" title="Permanent link">&para;</a></h2>
 <p>If the <code>steps</code> field is omitted, the canary strategy will mimic the rolling update behavior. Similar to the deployment, the canary strategy has the <code>maxSurge</code> and <code>maxUnavailable</code> fields to configure how the Rollout should progress to the new version.</p>
 <h2 id="other-configurable-features">Other Configurable Features<a class="headerlink" href="#other-configurable-features" title="Permanent link">&para;</a></h2>
 <p>Here are the optional fields that will modify the behavior of canary strategy:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">strategy</span><span class="p">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="nt">analysis</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
-      <span class="nt">antiAffinity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
-      <span class="nt">canaryService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
-      <span class="nt">stableService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string</span>
-      <span class="nt">maxSurge</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stringOrInt</span>
-      <span class="nt">maxUnavailable</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stringOrInt</span>
-      <span class="nt">trafficRouting</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">object</span>
+<div class="highlight"><pre><span></span><code><span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">strategy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">analysis</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
+<span class="w">      </span><span class="nt">antiAffinity</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
+<span class="w">      </span><span class="nt">canaryService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">      </span><span class="nt">stableService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">string</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maxSurge</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stringOrInt</span><span class="w"></span>
+<span class="w">      </span><span class="nt">maxUnavailable</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stringOrInt</span><span class="w"></span>
+<span class="w">      </span><span class="nt">trafficRouting</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">object</span><span class="w"></span>
 </code></pre></div>
 <h3 id="analysis">analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h3>
 <p>Configure the background <a href="../analysis/">Analysis</a> to execute during the rollout. If the analysis is unsuccessful the rollout will be aborted.</p>
@@ -2056,11 +2427,6 @@ kubectl argo rollouts promote &lt;rollout&gt;
 <h3 id="trafficrouting">trafficRouting<a class="headerlink" href="#trafficrouting" title="Permanent link">&para;</a></h3>
 <p>The <a href="../traffic-management/">traffic management</a> rules to apply to control the flow of traffic between the active and canary versions. If not set, the default weighted pod replica based routing will be used.</p>
 <p>Defaults to nil</p>
-                
-              
-              
-                
-
 
               
             </article>
@@ -2069,8 +2435,7 @@ kubectl argo rollouts promote &lt;rollout&gt;
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -2109,14 +2474,15 @@ kubectl argo rollouts promote &lt;rollout&gt;
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -2126,10 +2492,12 @@ kubectl argo rollouts promote &lt;rollout&gt;
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
-      <script src="../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+        <script src="../../assets/versions.js"></script>
       
     
   </body>

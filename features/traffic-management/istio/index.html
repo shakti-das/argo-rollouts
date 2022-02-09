@@ -8,11 +8,10 @@
       
       
       
-      
         <link rel="canonical" href="https://argoproj.github.io/argo-rollouts/features/traffic-management/istio/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.10">
     
     
       
@@ -20,14 +19,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d6be258b.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#009485">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.e6a45f82.min.css">
         
       
     
@@ -37,14 +32,15 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font-family:"Work Sans";--md-code-font-family:""}</style>
+        <style>:root{--md-text-font:"Work Sans";--md-code-font:""}</style>
       
     
     
+      <link rel="stylesheet" href="../../../assets/versions.css">
     
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-
 
     
     
@@ -53,13 +49,16 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -76,7 +75,10 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+    
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../../.." title="Argo Rollouts - Kubernetes Progressive Delivery Controller" class="md-header__button md-logo" aria-label="Argo Rollouts - Kubernetes Progressive Delivery Controller" data-md-component="logo">
       
@@ -103,13 +105,34 @@
       </div>
     </div>
     
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+      </form>
+    
     
     
       <label class="md-header__button md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
-      
-<div class="md-search" data-md-component="search" role="dialog">
+      <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -141,8 +164,7 @@
     
     
       <div class="md-header__source">
-        
-<a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -154,11 +176,14 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
+        
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -183,8 +208,7 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/argoproj/argo-rollouts/" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
@@ -270,10 +294,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
-      <label class="md-nav__link" for="__nav_5">
-        Getting Started
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Getting Started
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Getting Started" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
@@ -282,6 +310,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -292,8 +321,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -304,8 +335,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -316,8 +349,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -328,8 +363,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -340,8 +377,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -352,6 +391,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -387,10 +427,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
-      <label class="md-nav__link" for="__nav_7">
-        Rollout
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Rollout
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Rollout" data-md-level="1">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
@@ -399,6 +443,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -408,10 +453,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_1" type="checkbox" id="__nav_7_1" >
       
-      <label class="md-nav__link" for="__nav_7_1">
-        Deployment Strategies
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7_1">
+          Deployment Strategies
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Deployment Strategies" data-md-level="2">
         <label class="md-nav__title" for="__nav_7_1">
           <span class="md-nav__icon md-icon"></span>
@@ -420,6 +469,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -430,8 +480,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -442,14 +494,17 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -460,8 +515,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -472,8 +529,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -484,8 +543,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -496,8 +557,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../scaledown-aborted-rs/" class="md-nav__link">
+        Scaledown Aborted Rollouts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -508,8 +585,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -520,8 +599,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -532,8 +613,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -544,6 +627,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -566,10 +650,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" checked>
       
-      <label class="md-nav__link" for="__nav_8">
-        Traffic Management
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_8">
+          Traffic Management
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Traffic Management" data-md-level="1">
         <label class="md-nav__title" for="__nav_8">
           <span class="md-nav__icon md-icon"></span>
@@ -578,6 +666,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -588,8 +677,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -600,8 +691,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -612,8 +705,10 @@
     </li>
   
 
+            
           
             
+              
   
   
     
@@ -637,6 +732,7 @@
       </a>
       
         
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -746,8 +842,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -758,8 +856,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -770,6 +870,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -790,10 +891,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
       
-      <label class="md-nav__link" for="__nav_9">
-        Analysis
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_9">
+          Analysis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Analysis" data-md-level="1">
         <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
@@ -802,6 +907,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -812,8 +918,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -824,8 +932,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -836,8 +946,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -848,8 +960,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -860,8 +974,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -872,8 +988,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -884,8 +1002,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -896,6 +1016,21 @@
     </li>
   
 
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../analysis/cloudwatch/" class="md-nav__link">
+        CloudWatch
+      </a>
+    </li>
+  
+
+            
           
         </ul>
       </nav>
@@ -931,10 +1066,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11" type="checkbox" id="__nav_11" >
       
-      <label class="md-nav__link" for="__nav_11">
-        Notifications
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11">
+          Notifications
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Notifications" data-md-level="1">
         <label class="md-nav__title" for="__nav_11">
           <span class="md-nav__icon md-icon"></span>
@@ -943,6 +1082,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -953,8 +1093,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -964,10 +1106,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_11_2" type="checkbox" id="__nav_11_2" >
       
-      <label class="md-nav__link" for="__nav_11_2">
-        Services
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_11_2">
+          Services
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Services" data-md-level="2">
         <label class="md-nav__title" for="__nav_11_2">
           <span class="md-nav__icon md-icon"></span>
@@ -976,6 +1122,21 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generated/notification-services/alertmanager/" class="md-nav__link">
+        Alertmanager
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -986,8 +1147,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -998,8 +1161,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generated/notification-services/googlechat/" class="md-nav__link">
+        Google Chat
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1010,8 +1189,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1022,8 +1203,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1034,8 +1217,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1046,8 +1231,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generated/notification-services/pushover/" class="md-nav__link">
+        Pushover
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1058,8 +1259,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1070,8 +1273,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1082,8 +1287,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1094,8 +1301,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1106,12 +1315,14 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1132,10 +1343,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12" type="checkbox" id="__nav_12" >
       
-      <label class="md-nav__link" for="__nav_12">
-        Kubectl Plugin
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12">
+          Kubectl Plugin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Kubectl Plugin" data-md-level="1">
         <label class="md-nav__title" for="__nav_12">
           <span class="md-nav__icon md-icon"></span>
@@ -1144,6 +1359,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1154,8 +1370,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1165,10 +1383,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_12_2" type="checkbox" id="__nav_12_2" >
       
-      <label class="md-nav__link" for="__nav_12_2">
-        Commands
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_12_2">
+          Commands
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Commands" data-md-level="2">
         <label class="md-nav__title" for="__nav_12_2">
           <span class="md-nav__icon md-icon"></span>
@@ -1177,6 +1399,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1187,8 +1410,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1199,8 +1424,24 @@
     </li>
   
 
+            
           
             
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../generated/kubectl-argo-rollouts/kubectl-argo-rollouts_completion/" class="md-nav__link">
+        Rollouts Completion
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
   
   
   
@@ -1211,8 +1452,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1223,8 +1466,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1235,8 +1480,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1247,8 +1494,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1259,8 +1508,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1271,8 +1522,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1283,8 +1536,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1295,8 +1550,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1307,8 +1564,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1319,8 +1578,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1331,8 +1592,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1343,8 +1606,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1355,8 +1620,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1367,8 +1634,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1379,8 +1648,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1391,8 +1662,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1403,8 +1676,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1415,8 +1690,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1427,8 +1704,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1439,8 +1718,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1451,8 +1732,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1463,8 +1746,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1475,8 +1760,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1487,8 +1774,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1499,8 +1788,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1511,8 +1802,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1523,8 +1816,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1535,8 +1830,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1547,8 +1844,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1559,8 +1858,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1571,12 +1872,14 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1672,10 +1975,14 @@
       
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_18" type="checkbox" id="__nav_18" >
       
-      <label class="md-nav__link" for="__nav_18">
-        Contributing
-        <span class="md-nav__icon md-icon"></span>
-      </label>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_18">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <nav class="md-nav" aria-label="Contributing" data-md-level="1">
         <label class="md-nav__title" for="__nav_18">
           <span class="md-nav__icon md-icon"></span>
@@ -1684,6 +1991,7 @@
         <ul class="md-nav__list" data-md-scrollfix>
           
             
+              
   
   
   
@@ -1694,8 +2002,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1706,8 +2016,10 @@
     </li>
   
 
+            
           
             
+              
   
   
   
@@ -1718,6 +2030,7 @@
     </li>
   
 
+            
           
         </ul>
       </nav>
@@ -1782,6 +2095,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -1896,12 +2210,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/features/traffic-management/istio.md" title="Edit this page" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
-                  </a>
-                
-                
-                <h1 id="istio">Istio<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h1>
+<a href="https://github.com/argoproj/argo-rollouts/edit/master/docs/features/traffic-management/istio.md" title="Edit this page" class="md-content__button md-icon">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+</a>
+
+
+<h1 id="istio">Istio<a class="headerlink" href="#istio" title="Permanent link">&para;</a></h1>
 <p><a href="https://istio.io/">Istio</a> is a service mesh that offers a rich feature-set to control the flow of
 traffic to a web service. Istio offers this functionality through a set of CRDs, and Argo Rollouts
 automates the management of these resources to provide advanced traffic shaping capabilities to the
@@ -1931,83 +2245,83 @@ Nginx). Using this approach, the user is required to deploy the following resour
 <li>VirtualService</li>
 </ul>
 <p>The Rollout should define the following fields:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">...</span>
-  <span class="l l-Scalar l-Scalar-Plain">strategy</span><span class="p p-Indicator">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="nt">canaryService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary-svc</span>  <span class="c1"># required</span>
-      <span class="nt">stableService</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable-svc</span>  <span class="c1"># required</span>
-      <span class="nt">trafficRouting</span><span class="p">:</span>
-        <span class="nt">istio</span><span class="p">:</span>
-          <span class="nt">virtualService</span><span class="p">:</span> 
-            <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span>   <span class="c1"># required</span>
-            <span class="nt">routes</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span>            <span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
-      <span class="nt">steps</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setWeight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
-      <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span>
-          <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10m</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rollout</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">strategy</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">canaryService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-svc</span><span class="w">  </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">      </span><span class="nt">stableService</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-svc</span><span class="w">  </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">      </span><span class="nt">trafficRouting</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">istio</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">virtualService</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w">   </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">            </span><span class="nt">routes</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w">            </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span><span class="w"></span>
 </code></pre></div>
 <p>The VirtualService must contain an HTTP route with a name referenced in the Rollout, containing
 two route destinations with <code>host</code> values that match the <code>canaryService</code> and <code>stableService</code> 
 referenced in the Rollout.  If the VirtualService is defined in a different namespace than the rollout,
 its name should be <code>rollout-vsvc.&lt;vsvc namespace name&gt;</code>. Note that Istio requires that all weights add to
 100, so the initial weights can be 100% to stable, and 0% to canary.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">gateways</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">istio-rollout-gateway</span>
-  <span class="nt">hosts</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">istio-rollout.dev.argoproj.io</span>
-  <span class="nt">http</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primary</span>        <span class="c1"># referenced in canary.trafficRouting.istio.virtualService.routes</span>
-    <span class="nt">route</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable-svc</span> <span class="c1"># referenced in canary.stableService</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary-svc</span> <span class="c1"># referenced in canary.canaryService</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">gateways</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-rollout-gateway</span><span class="w"></span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-rollout.dev.argoproj.io</span><span class="w"></span>
+<span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w">        </span><span class="c1"># referenced in canary.trafficRouting.istio.virtualService.routes</span><span class="w"></span>
+<span class="w">    </span><span class="nt">route</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-svc</span><span class="w"> </span><span class="c1"># referenced in canary.stableService</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-svc</span><span class="w"> </span><span class="c1"># referenced in canary.canaryService</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 </code></pre></div>
 <p>Finally, a canary and stable Service should be deployed. The selector of these Services will be
 modified by the Rollout during an update to target the canary and stable ReplicaSet pods.
 Note that if the VirtualService and destination host resides in different namespaces (e.g., VirtualService and Rollout are not in the same namespace), the namespace should be included in the destination host (e.g. <code>stable-svc.&lt;namespace&gt;</code>).</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary-svc</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-    <span class="nt">targetPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-    <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
-    <span class="c1"># This selector will be updated with the pod-template-hash of the canary ReplicaSet. e.g.:</span>
-    <span class="c1"># rollouts-pod-template-hash: 7bf84f9696</span>
-<span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable-svc</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-    <span class="nt">targetPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-    <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span>
-    <span class="c1"># This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:</span>
-    <span class="c1"># rollouts-pod-template-hash: 123746c88d</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-svc</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># This selector will be updated with the pod-template-hash of the canary ReplicaSet. e.g.:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># rollouts-pod-template-hash: 7bf84f9696</span><span class="w"></span>
+<span class="nn">---</span><span class="w"></span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-svc</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollouts-demo</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># This selector will be updated with the pod-template-hash of the stable ReplicaSet. e.g.:</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># rollouts-pod-template-hash: 123746c88d</span><span class="w"></span>
 </code></pre></div>
 <p>During the lifecycle of a Rollout update, Argo Rollouts will continuously:</p>
 <ul>
@@ -2035,85 +2349,85 @@ required to deploy the following resources:</p>
 <li>DestinationRule</li>
 </ul>
 <p>The Rollout should define the following fields:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Rollout</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="l l-Scalar l-Scalar-Plain">...</span>
-  <span class="l l-Scalar l-Scalar-Plain">strategy</span><span class="p p-Indicator">:</span>
-    <span class="nt">canary</span><span class="p">:</span>
-      <span class="nt">trafficRouting</span><span class="p">:</span>
-        <span class="nt">istio</span><span class="p">:</span>
-          <span class="nt">virtualService</span><span class="p">:</span> 
-            <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span>        <span class="c1"># required</span>
-            <span class="nt">routes</span><span class="p">:</span>
-            <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">primary</span>                 <span class="c1"># optional if there is a single route in VirtualService, required otherwise</span>
-          <span class="nt">destinationRule</span><span class="p">:</span>
-            <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-destrule</span>    <span class="c1"># required</span>
-            <span class="nt">canarySubsetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary</span>  <span class="c1"># required</span>
-            <span class="nt">stableSubsetName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable</span>  <span class="c1"># required</span>
-      <span class="nt">steps</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="nt">setWeight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">5</span>
-      <span class="p p-Indicator">-</span> <span class="nt">pause</span><span class="p">:</span>
-          <span class="nt">duration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">10m</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rollout</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">strategy</span><span class="p p-Indicator">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">canary</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">trafficRouting</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">istio</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">virtualService</span><span class="p">:</span><span class="w"> </span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w">        </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">            </span><span class="nt">routes</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w">                 </span><span class="c1"># optional if there is a single route in VirtualService, required otherwise</span><span class="w"></span>
+<span class="w">          </span><span class="nt">destinationRule</span><span class="p">:</span><span class="w"></span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-destrule</span><span class="w">    </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">            </span><span class="nt">canarySubsetName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span><span class="w">  </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">            </span><span class="nt">stableSubsetName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span><span class="w">  </span><span class="c1"># required</span><span class="w"></span>
+<span class="w">      </span><span class="nt">steps</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">setWeight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pause</span><span class="p">:</span><span class="w"></span>
+<span class="w">          </span><span class="nt">duration</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10m</span><span class="w"></span>
 </code></pre></div>
 <p>A single service should be defined, which targets the Rollout pods. Note that unlike the first
 approach, where traffic splitting is against multiple Services which are modified to contain the
 rollout-pod-template-hash of the canary/stable ReplicaSets, this Service is not modified by
 the rollout controller.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">ports</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">port</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">80</span>
-    <span class="nt">targetPort</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-    <span class="nt">protocol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">TCP</span>
-    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">http</span>
-  <span class="nt">selector</span><span class="p">:</span>
-    <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w"></span>
+<span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span><span class="w"></span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span><span class="w"></span>
+<span class="w">  </span><span class="nt">selector</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
 </code></pre></div>
 <p>The VirtualService must contain an HTTP route with a name referenced in the Rollout, containing
 two route destinations with <code>subset</code> values that match the <code>canarySubsetName</code> and <code>stableSubsetName</code> 
 referenced in the Rollout. Note that Istio requires that all weights add to 100, so the initial
 weights can be 100% to stable, and 0% to canary.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">gateways</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">istio-rollout-gateway</span>
-  <span class="nt">hosts</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">istio-rollout.dev.argoproj.io</span>
-  <span class="nt">http</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primary</span>       <span class="c1"># referenced in canary.trafficRouting.istio.virtualService.routes</span>
-    <span class="nt">route</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-        <span class="nt">subset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable</span>  <span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.stableSubsetName</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-        <span class="nt">subset</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary</span>  <span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.canarySubsetName</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-vsvc</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">gateways</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-rollout-gateway</span><span class="w"></span>
+<span class="w">  </span><span class="nt">hosts</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">istio-rollout.dev.argoproj.io</span><span class="w"></span>
+<span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w">       </span><span class="c1"># referenced in canary.trafficRouting.istio.virtualService.routes</span><span class="w"></span>
+<span class="w">    </span><span class="nt">route</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="w">        </span><span class="nt">subset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span><span class="w">  </span><span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.stableSubsetName</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="w">        </span><span class="nt">subset</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span><span class="w">  </span><span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.canarySubsetName</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 </code></pre></div>
 <p>Finally, the DestinationRule containing the canary and stable subsets referenced in the Rollout.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">DestinationRule</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-destrule</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-  <span class="nt">subsets</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary</span>   <span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.canarySubsetName</span>
-    <span class="nt">labels</span><span class="p">:</span>        <span class="c1"># labels will be injected with canary rollouts-pod-template-hash value</span>
-      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable</span>   <span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.stableSubsetName</span>
-    <span class="nt">labels</span><span class="p">:</span>        <span class="c1"># labels will be injected with stable rollouts-pod-template-hash value</span>
-      <span class="nt">app</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rollout-example</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io/v1alpha3</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DestinationRule</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-destrule</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="w">  </span><span class="nt">subsets</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary</span><span class="w">   </span><span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.canarySubsetName</span><span class="w"></span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w">        </span><span class="c1"># labels will be injected with canary rollouts-pod-template-hash value</span><span class="w"></span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable</span><span class="w">   </span><span class="c1"># referenced in canary.trafficRouting.istio.destinationRule.stableSubsetName</span><span class="w"></span>
+<span class="w">    </span><span class="nt">labels</span><span class="p">:</span><span class="w">        </span><span class="c1"># labels will be injected with stable rollouts-pod-template-hash value</span><span class="w"></span>
+<span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rollout-example</span><span class="w"></span>
 </code></pre></div>
 <p>During the lifecycle of a Rollout using Istio DestinationRule, Argo Rollouts will continuously:</p>
 <ul>
@@ -2127,45 +2441,45 @@ where the primary Istio cluster is different than the cluster where the Argo Rol
 is running, then you need to do the following setup:</p>
 <ol>
 <li>Create a <code>ServiceAccount</code> in the Istio primary cluster.
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span>
-  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;any-namespace-preferrably-config-namespace&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;any-namespace-preferrably-config-namespace&gt;</span><span class="w"></span>
 </code></pre></div></li>
 <li>Create a <code>ClusterRole</code> that provides access to Rollout controller in the Istio primary cluster.
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span>
-<span class="nt">rules</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="nt">apiGroups</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io</span>
-  <span class="nt">resources</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">virtualservices</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">destinationrules</span>
-  <span class="nt">verbs</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">get</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">list</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">watch</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">update</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">patch</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span><span class="w"></span>
+<span class="nt">rules</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io</span><span class="w"></span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">virtualservices</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">destinationrules</span><span class="w"></span>
+<span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">get</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">list</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">watch</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">update</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">patch</span><span class="w"></span>
 </code></pre></div>
 Note: If Argo Rollout controller is also installed in the Istio primary cluster, then you can reuse the 
 <code>argo-rollouts-clusterrole</code> ClusterRole instead of creating a new one. </li>
 <li>Link the <code>ClusterRole</code> with the <code>ServiceAccount</code> in the Istio primary cluster.
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span>
-<span class="nt">roleRef</span><span class="p">:</span>
-  <span class="nt">apiGroup</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
-  <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span>
-<span class="nt">subjects</span><span class="p">:</span>
-<span class="p p-Indicator">-</span> <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span>
-  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">&lt;namespace-of-the-service-account&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span><span class="w"></span>
+<span class="nt">roleRef</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span><span class="w"></span>
+<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span><span class="w"></span>
+<span class="nt">subjects</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argo-rollouts-istio-primary</span><span class="w"></span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">&lt;namespace-of-the-service-account&gt;</span><span class="w"></span>
 </code></pre></div></li>
 <li>Now, use the following command to generate a secret for Rollout controller to access the Istio primary cluster.
    This secret will be applied to the cluster where Argo Rollout is running (i.e, Istio remote cluster),
@@ -2205,15 +2519,15 @@ different parameters, such as the workload name:</p>
 <h2 id="integrating-with-gitops">Integrating with GitOps<a class="headerlink" href="#integrating-with-gitops" title="Permanent link">&para;</a></h2>
 <p>Earlier it was explained that VirtualServices should be deployed with an initial canary and stable
 weight of 0 and 100, respectively, such as in the following example:</p>
-<div class="highlight"><pre><span></span><code>  <span class="nt">http</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">primary</span>
-    <span class="nt">route</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">stable-svc</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
-    <span class="p p-Indicator">-</span> <span class="nt">destination</span><span class="p">:</span>
-        <span class="nt">host</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">canary-svc</span>
-      <span class="nt">weight</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">http</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">primary</span><span class="w"></span>
+<span class="w">    </span><span class="nt">route</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">stable-svc</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">destination</span><span class="p">:</span><span class="w"></span>
+<span class="w">        </span><span class="nt">host</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-svc</span><span class="w"></span>
+<span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span><span class="w"></span>
 </code></pre></div>
 <p>This introduces a problem for users practicing GitOps. Since a Rollout will modify these
 VirtualService weights as the Rollout progresses through its steps, it unfortunately causes the
@@ -2230,16 +2544,16 @@ leverage the following Argo CD features:</p>
 <ol>
 <li>
 <p>Configure the application to ignore differences in the VirtualService. e.g.:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Application</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">guestbook</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">ignoreDifferences</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">group</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">networking.istio.io</span>
-    <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">VirtualService</span>
-    <span class="nt">jsonPointers</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">/spec/http/0</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">ignoreDifferences</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networking.istio.io</span><span class="w"></span>
+<span class="w">    </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VirtualService</span><span class="w"></span>
+<span class="w">    </span><span class="nt">jsonPointers</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/spec/http/0</span><span class="w"></span>
 </code></pre></div>
 <p>Ignoring the differences in the VirtualServices HTTP route, prevents gitops differences
 in the VirtualService HTTP routes to contribute to the overall sync status of the Argo CD
@@ -2248,14 +2562,14 @@ triggered.</p>
 </li>
 <li>
 <p>Configure the Application to only apply OutOfSync resources:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span>
-<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Application</span>
-<span class="nt">metadata</span><span class="p">:</span>
-  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">guestbook</span>
-<span class="nt">spec</span><span class="p">:</span>
-  <span class="nt">syncPolicy</span><span class="p">:</span>
-    <span class="nt">syncOptions</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ApplyOutOfSyncOnly=true</span>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">argoproj.io/v1alpha1</span><span class="w"></span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Application</span><span class="w"></span>
+<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">guestbook</span><span class="w"></span>
+<span class="nt">spec</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">syncPolicy</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">syncOptions</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ApplyOutOfSyncOnly=true</span><span class="w"></span>
 </code></pre></div>
 <p>By default, when Argo CD  syncs an application, it runs <code>kubectl apply</code> against all resources in
 git which are part of the application. The <code>ApplyOutOfSyncOnly=true</code> sync option indicates to
@@ -2279,11 +2593,6 @@ other controllers (e.g. Argo Rollouts) controller manage them instead.</p>
 <p>Both of these issues adds more complexity to the users and Argo Rollouts developers compared to referencing a Virtual Service.</p>
 <h3 id="istio-support-through-the-smi-adapter-for-istio">Istio support through the <a href="https://github.com/servicemeshinterface/smi-adapter-istio">SMI Adapter for Istio</a><a class="headerlink" href="#istio-support-through-the-smi-adapter-for-istio" title="Permanent link">&para;</a></h3>
 <p><a href="https://smi-spec.io/">SMI</a> is the Service Mesh Interface, which serves as a standard interface for all common features of a service mesh. This feature is GitOps friendly, but native Istio has extra functionality that SMI does not currently provide.</p>
-                
-              
-              
-                
-
 
               
             </article>
@@ -2292,8 +2601,7 @@ other controllers (e.g. Argo Rollouts) controller manage them instead.</p>
         
       </main>
       
-        
-<footer class="md-footer">
+        <footer class="md-footer">
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
@@ -2332,14 +2640,15 @@ other controllers (e.g. Argo Rollouts) controller manage them instead.</p>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
-        
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-        
-      </div>
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
       
     </div>
   </div>
@@ -2349,10 +2658,12 @@ other controllers (e.g. Argo Rollouts) controller manage them instead.</p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.092fa1f6.min.js"}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.e3b2bf44.min.js"></script>
+      
+        <script src="../../../assets/versions.js"></script>
       
     
   </body>
